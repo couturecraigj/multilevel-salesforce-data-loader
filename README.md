@@ -15,7 +15,8 @@ Customer
   * We go through each line of the Invoice Table and attempt to add the Job information to the Job table or Ignore if it already exists
   * We go through each line of the Invoice Table and attempt to add the Customer information to the Customer Table or ignore if it alredy exists
 * When the Invoice Table is finished processing attempt to load this data into salesforce starting with the Customer then the Job and then the Invoices... upon completion the system will then pull down all salesforce data onto the current users computer to reduce the load on the next attempted insert
-##Alternate Process
+
+## Alternate Process
 * We are wanting to update existing data
   * We insert a file into the directory
   * We perform a Query from salesforce making sure we pull down all the existing data
