@@ -1,0 +1,40 @@
+<h1></h1>
+		Name: <input type="text" ng-model="user.name.first" placeholder="first">
+		<input type="text" ng-model="user.name.last" placeholder="last"><br>
+		Nickname: <input type="text" ng-model="user.name.nick"><br><br><hr>
+		Birthdate: <input type="date" ng-model="user.demo.birthdate"><br>
+		Gender: <select type="text" ng-model="user.demo.gender">
+			<option>male</option>
+			<option>female</option>
+		</select><br>
+		Religion: <input type="text" ng-model="user.demo.religion"><br>
+		Ethnicity: <input type="text" ng-model="user.demo.ethnicity"><br>
+		Languages: <input type="text" ng-model="user.demo.languages"><br>
+		Income: <input type="number" ng-model="user.demo.income"><br>
+		Nationality: <input type="text" ng-model="user.demo.nationality"><br>
+		Education: <input type="text" ng-model="user.demo.education"><br>
+		Relationship Status: <select type="text" ng-model="user.demo.rstatus">
+			<option>single</option>
+			<option>married</option>
+			<option>divorced</option>
+			<option>its complicated</option>
+		</select><br>
+		Occupation: <input type="text" ng-model="user.demo.occup"><br>
+		Have Dependents?: <select type="text" ng-model="user.demo.depend">
+			<option>no</option>
+			<option>yes</option>
+		</select><br>
+		Living with Parents: <select type="text" ng-model="user.demo.wpar">
+			<option>no</option>
+			<option>yes</option>
+		</select><br>
+		Family Size: <input type="number" ng-model="user.demo.famsize"><br>
+		Zip Code: <input type="text" ng-model="user.demo.zip"><br>
+		Own Your Home: <select type="text" ng-model="user.demo.ownhome">
+			<option>no</option>
+			<option>yes</option>
+		</select><br>
+		Approximate Last Move: <input type="date" ng-model="user.demo.lastmove"><br>
+
+		<button ng-click="update()">Update</button>
+		<a href="/productpage">Cancel</a>

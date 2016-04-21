@@ -1,0 +1,24 @@
+doctype html
+//- provide ngapp with a name if you are going to use angular
+meta(charset="utf-8")
+meta(name="viewport",content="width=device-width,initial-scale=1")
+meta(name="description",content="Opine Inc")
+meta(name="author",content="Opine Inc")
+html(ng-app="#{ngapp}") 
+	head
+		block title
+			- var title= title || "Opine"
+			title 'Test | #{title}'
+		block style
+			link(rel="stylesheet", href="/stylesheets/style.css")
+		//if lt IE 9		
+		block IEscripts
+			//IE Scripts can go here to keep usability consistent
+	body
+		input(type="hidden", name="_csrf", value="#{csrftoken}")
+		block content
+			// Content Goes Here
+	block scripts
+		// Scripts Go Here
+		//Speech Balloon graphic by <a href="http://www.rivolta.es">Situ Herrera</a> from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a>
+

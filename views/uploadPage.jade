@@ -1,0 +1,10 @@
+extends layout
+block title
+	title= title
+block content
+	h1= title
+	form#fileUpload(method="post" action="/uploads/upload" enctype="multipart/form-data")
+		label(for="payload") Select a file to upload:
+		input#payload(type="file" name="myFile" accept=".csv")
+		br
+		button#upload Upload

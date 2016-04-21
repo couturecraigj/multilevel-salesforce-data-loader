@@ -1,0 +1,85 @@
+extends layout
+
+block title
+	title User Details
+block style
+	link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css")
+	link(rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
+	style.
+		body        { padding-top:80px; }
+
+block content
+	div(class="container")
+		div(class="col-sm-6 col-sm-offset-3")
+			h1
+		form(name="updateUser" action="/user/details" method="put")
+			br
+			|Name: 
+			input(type="text" name="firstName" placeholder="first")
+			input(type="text" name="lastName" placeholder="last")
+			br
+			|Nickname: 
+			input(type="text" name="nickName")
+			br
+			|Birthdate: 
+			input(type="date" name="birthdate")
+			br
+			|Gender: 
+			select(type="text" name="gender")
+				option male
+				option female
+			br
+			|Religion: 
+			input(type="text" name="religion")
+			br
+			|Ethnicity: 
+			input(type="text" name="ethnicity")
+			br
+			|Languages: 
+			input(type="text" name="languages")
+			br
+			|Income: 
+			input(type="number" name="income")
+			br
+			|Nationality: 
+			input(type="text" name="nationality")
+			br
+			|Education: 
+			input(type="text" name="education")
+			br
+			|Relationship Status: 
+			select(type="text" name="relationshipStatus")
+				option single
+				option married
+				option divorced
+				option its complicated
+			br
+			|Occupation: 
+			input(type="text" name="occupation")
+			br
+			|Have Dependents?: 
+			select(type="text" name="dependents")
+				option no
+				option yes
+			br
+			|Living with Parents: 
+			select(type="text" name="withParents")
+				option no
+				option yes
+			br
+			|Family Size: 
+			input(type="number" name="familySize")
+			br
+			|Zip Code: 
+			input(type="text" name="Zip")
+			br
+			|Own Your Home: 
+			select(type="text" name="ownHome")
+				option no
+				option yes
+			br
+			|Approximate Last Move: 
+			input(type="date" name="lastMove")
+			br
+			button(type="submit" ) Update
+		a(href="/profile") Cancel

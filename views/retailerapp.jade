@@ -1,0 +1,28 @@
+extends layout
+block style
+	link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.0.9/css/bootstrap-slider.min.css")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.0.0/ng-tags-input.min.css")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.0.0/ng-tags-input.bootstrap.min.css")
+	link(href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css", rel="stylesheet", integrity="sha256-ZSKfhECi0yCEmGVAuQLWTHtJEn2vBNPexEWsJCIC/Nc= sha512-b+mSnD4QXw1uYwkgJ3d0XxoMXo+ZKHJNTNNFIddJ0IazcwKvKYtIlWADZ1JEREJzxUG428sfCw7qDuswAFcrOQ==", crossorigin="anonymous")
+	link(rel="stylesheet", href="/stylesheets/style.css")
+
+block content
+	ng-view
+	input(type="hidden", name="loggedIn", value="#{loggedIn}", ng-init="loggedIn=#{loggedIn}", ng-model="loggedIn")
+
+	<!-- Libraries -->
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-resource.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-animate.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.0.9/bootstrap-slider.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.0.0/ng-tags-input.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/angular-strap.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/angular-strap.tpl.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/modules/date-parser.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/modules/date-formatter.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/modules/tooltip.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.0-beta.3/angular-moment.min.js")
+	script(src="/javascripts/custom/retailers.js")

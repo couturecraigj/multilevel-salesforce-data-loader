@@ -1,0 +1,214 @@
+extends layout
+block title
+  title Home | URView
+block style
+  link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
+  link(href='stylesheets/font-awesome.min.css', rel='stylesheet')
+  link(href='stylesheets/animate.min.css', rel='stylesheet')
+  link(href='stylesheets/lightbox.css', rel='stylesheet')
+  link(href='stylesheets/main.css', rel='stylesheet')
+  link(href='stylesheets/responsive.css', rel='stylesheet')
+  link(rel='shortcut icon', href='images/ico/op.ico')
+block IEscripts
+  //if lt IE 9
+    script(src='js/html5shiv.js')
+    script(src='js/respond.min.js')
+block content
+  header#header
+    .container
+      .row
+        .col-sm-12.overflow
+          .social-icons.pull-right
+            ul.nav.nav-pills
+              li
+                a(href='')
+                  i.fa.fa-facebook
+              li
+                a(href='')
+                  i.fa.fa-twitter
+              li
+                a(href='')
+                  i.fa.fa-google-plus
+    .navbar.navbar-inverse(role='banner')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html')
+            h1
+              img(src='images/op_logo.png', alt='logo', width='208')
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a(href='index.html') Home
+            li.dropdown
+              a(href='#')
+                | Browse Products
+                i.fa.fa-angle-down
+              ul.sub-menu(role='menu')
+                li
+                  a(href='Product-Selection.html') Electronics Store
+                li
+                  a(href='#') Furniture Warehouse
+                li
+                  a(href='#') Toys Shop
+                li
+                  a(href='#') Fitness Farm
+                li
+                  a(href='#') Hardware Depot
+                li
+                  a(href='#') Appliances SuperStore
+            li
+              a(href='/signup') Sign Up 
+            li
+              a(href='/login') Login 
+        .search
+          form(role='form')
+            i.fa.fa-search
+            .field-toggle
+              input.search-form(type='text', autocomplete='off', placeholder='Search')
+  // /#header
+  section#home-slider
+    .container
+      .row
+        .main-slider
+          .row
+            .slide-text.col-md-6.col-sm-12
+              h1 We Listen to Your Voice and Unbiasedly Share It with the World
+              p
+                | We are a centralized reviewing service that allows you to quickly and easily choose areas that you would like to review a product on as a result we give you tokens, yes tokens like in an arcade, to redeem for some of our available items from our "shop".
+              a.btn.btn-warning(href='/signup') SIGN UP NOW
+            .hidden-md.hidden-sm.hidden-xs(<span='', data-wow-duration='500ms', data-wow-delay='500ms', aria-hidden='true', style='font-size:2em')
+              span.glyphicon.glyphicon-comment.text-success.wow.scaleIn.slider-success(data-wow-duration='500ms', data-wow-delay='1000ms', aria-hidden='true', style='font-size:2em')
+              span.glyphicon.glyphicon-comment.text-info.wow.scaleIn.slider-info(data-wow-duration='500ms', data-wow-delay='1500ms', aria-hidden='true', style='font-size:2em')
+              span.glyphicon.glyphicon-comment.text-warning.wow.scaleIn.slider-warning(data-wow-duration='500ms', data-wow-delay='2000ms', aria-hidden='true', style='font-size:2em')
+              span.glyphicon.glyphicon-comment.text-danger.wow.scaleIn.slider-danger(data-wow-duration='500ms', data-wow-delay='2500ms', aria-hidden='true', style='font-size:2em')
+      .preloader
+        i.fa.fa-sun-o.fa-spin
+  // /#home-slider
+  section#services
+    .container
+      .row
+        .col-sm-4.text-center.padding.wow.fadeIn(data-wow-duration='1000ms', data-wow-delay='300ms')
+          .single-service
+            .wow.scaleIn(data-wow-duration='500ms', data-wow-delay='300ms')
+              img(src='http://placehold.it/80x85/CB5933')
+            h2 Review a Product
+            p
+              | We will mark next to each available field how many tickets that field is worth if it is filled in all you need to do is enter information to review the product  
+              br
+        .col-sm-4.text-center.padding.wow.fadeIn(data-wow-duration='1000ms', data-wow-delay='600ms')
+          .single-service
+            .wow.scaleIn(data-wow-duration='500ms', data-wow-delay='600ms')
+              img(src='http://placehold.it/80x85/0E76BC')
+            h2 Get Tokens
+            p
+              | As an added bonus we also provide some ticket multipliers which will take your total tickets and increase them by the amount of the multiplier.
+        .col-sm-4.text-center.padding.wow.fadeIn(data-wow-duration='1000ms', data-wow-delay='900ms')
+          .single-service
+            .wow.scaleIn(data-wow-duration='500ms', data-wow-delay='900ms')
+              img(src='http://placehold.it/80x85/D4C630')
+            h2 Shop for Rewards
+            p  to redeem for some of our available items from varities of merchandise.
+  // /#services
+  section#action.responsive
+    .vertical-center
+      .container
+        .row
+          .action.take-tour
+            .col-sm-7.wow.fadeInLeft(data-wow-duration='500ms', data-wow-delay='300ms')
+              h1.title  
+              p
+  // /#action
+  section#features
+    .container
+      .row
+        .single-features
+          .col-sm-5.wow.fadeInLeft(data-wow-duration='500ms', data-wow-delay='300ms')
+            img(src='http://placehold.it/400x184/CB5933')
+          .col-sm-6.wow.fadeInRight(data-wow-duration='500ms', data-wow-delay='300ms')
+            .col-sm-6.wow.fadeInRight(data-wow-duration='500ms', data-wow-delay='300ms')
+              h2 Some Reward Items
+              p Including gift cards, lastest products
+            p  
+        .clients-logo.wow.fadeIn(data-wow-duration='1000ms', data-wow-delay='600ms')
+          .col-xs-3.col-sm-2
+            a(href='#')
+              img(src='http://placehold.it/130x50/D29948')
+          .col-xs-3.col-sm-2
+            a(href='#')
+              img(src='http://placehold.it/130x50/D29948')
+          .col-xs-3.col-sm-2
+            a(href='#')
+              img(src='http://placehold.it/130x50/D29948')
+          .col-xs-3.col-sm-2
+            a(href='#')
+              img(src='http://placehold.it/130x50/D29948')
+          .col-xs-3.col-sm-2
+            a(href='#')
+              img(src='http://placehold.it/130x50/D29948')
+          .col-xs-3.col-sm-2
+            a(href='#')
+              img(src='http://placehold.it/130x50/D29948')
+  br
+  br
+  // /#features
+  section#clients
+    .container
+      .row
+        .col-sm-12
+          .clients.text-center.wow.fadeInUp(data-wow-duration='500ms', data-wow-delay='300ms')
+            p
+              img.img-responsive(src='images/home/clients.png', alt='')
+            h1.title Happy Campers
+            p
+              | As a service we are dedicated to your privacy and will not be sharing any personal information that will put your security at risk. We do not collect any payment methods as we receive payment in the form of reviews :). We will need a mailing address if you sign up to receive any of our bigger items from our shop. We will need an email address to receive our digital gift cards and that should be all you need to know to get started.
+  // /#clients
+  footer#footer
+    .container
+      .row
+        .col-sm-12.text-center.bottom-separator
+          img.img-responsive.inline(src='images/home/under.png', alt='')
+        .col-md-4.col-sm-6  
+        .col-md-3.col-sm-6
+          .contact-info.bottom
+            h2 Contacts
+            address
+              | E-mail: 
+              a(href='mailto:someone@example.com') email@email.com
+              br
+              |           Phone: +1 (123) 456 7890 
+              br
+              |           Fax: +1 (123) 456 7891 
+              br
+            h2 Address
+            address
+              | Houston, TX
+              br
+              |           United States
+              br
+        .col-md-4.col-sm-12
+          .contact-form.bottom
+            h2 Send a message
+            form#main-contact-form(name='contact-form', method='post', action='sendemail.php')
+              .form-group
+                input.form-control(type='text', name='name', required='required', placeholder='Name')
+              .form-group
+                input.form-control(type='email', name='email', required='required', placeholder='Email Address')
+              .form-group
+                textarea#message.form-control(name='message', required='required', rows='8', placeholder='Your text here')
+              .form-group
+                input.btn.btn-submit(type='submit', name='submit', value='Submit')
+        .col-sm-12
+          .copyright-text.text-center
+            p © Opine Inc. 2015. All Rights Reserved.
+      // /#footer
+block scripts 
+  script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+  script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js')
+  script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js')
+  script(type='text/javascript', src='javascripts/custom/main.js')
