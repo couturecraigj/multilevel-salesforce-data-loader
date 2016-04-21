@@ -1,0 +1,7 @@
+*
+!.gitignore
+!javascripts
+!stylesheets
+!fonts
+!images
+!bower_components
